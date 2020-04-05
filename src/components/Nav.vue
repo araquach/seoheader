@@ -7,11 +7,6 @@
             <b-navbar-item tag="router-link" to="/about">
                 About
             </b-navbar-item>
-            <b-navbar-dropdown label="More">
-                <b-navbar-item tag="router-link" to="/protected">
-                    Protected
-                </b-navbar-item>
-            </b-navbar-dropdown>
         </template>
         <template slot="end">
 
