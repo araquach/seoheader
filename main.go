@@ -15,7 +15,6 @@ var (
 )
 
 func init() {
-	// loads values from .env into the system
 	if err := godotenv.Load(); err != nil {
 		log.Print("No .env file found")
 	}
@@ -53,7 +52,13 @@ func main() {
 
 func index(w http.ResponseWriter, r *http.Request) {
 	w.Header().Set("Content-Type", "text/html")
-	if err := tplIndex.Execute(w, nil); err != nil {
+	data := map[string]string {
+		"title": "Nice Title",
+		"description": "Great description",
+		"image": "Image Link",
+		"url": "image url",
+	}
+	if err := tplIndex.Execute(w, data); err != nil {
 		panic(err)
 	}
 }
