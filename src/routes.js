@@ -3,7 +3,6 @@ import About from './components/About'
 import Login from './components/auth/Login'
 import Register from  './components/auth/Register'
 import Protected from './components/Protected'
-import {store} from "./store/store";
 
 export const routes = [
     { path: '', component: Home },
